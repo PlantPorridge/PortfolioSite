@@ -21,3 +21,14 @@
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
+.logo {
+    stroke: lightcoral;
+    stroke-width: 5;
+    fill: transparent;
+}
+
+.logo__circle {
+    stroke: lightcoral; 
+    stroke-width: 3;
+}
