@@ -90,29 +90,42 @@
 </table>
 
 <h4>Work</h4>
-<div class="header-date">
-  <h5 class="heading__header heading__header--no-margin-bottom">Exceedra Software</h5>
-  <span class="heading__date">October '14 - September '17</span>
+
+<div *ngFor='let work of workHistory'>
+  <div class="header-date">
+    <h5 class="heading__header heading__header--no-margin-bottom">{{work.company}}</h5>
+    <span class="heading__date">{{work.startDate | date:'MMM yy'}}</span>
+    <span> - </span>
+    <span class="heading__date">{{work.endDate | date:'MMM yy'}}</span>
+  </div>
+  <h5>{{work.jobTitle}}</h5>
+  <p>{{work.jobDescription}}</p>
+
+  <div class="tech-grid">
+
+    <b class="tech-grid__titles" *ngIf='work.techsCore'>Core Techs:</b>
+    <div class="tech-grid__badges" *ngIf='work.techsCore'>
+      <span *ngFor='let tech of work.techsCore' class="badge badge-primary">{{tech}}</span>
+    </div>
+
+    <b class="tech-grid__titles" *ngIf='work.techsSub'>Sub Techs:</b>
+    <div class="tech-grid__badges" *ngIf='work.techsSub'>
+      <span *ngFor='let tech of work.techsSub' class="badge badge-secondary">{{tech}}</span>
+    </div>
+
+    <b class="tech-grid__titles" *ngIf='work.tools'>Tools:</b>
+    <div class="tech-grid__badges" *ngIf='work.tools'>
+      <span *ngFor='let tool of work.tools' class="badge badge-info">{{tool}}</span>
+    </div>
+
+    <b class="tech-grid__titles" *ngIf='work.rolesCore'>Core Roles:</b>
+    <div class="tech-grid__badges" *ngIf='work.rolesCore'>
+      <span *ngFor='let role of work.rolesCore' class="badge badge-primary">{{role}}</span>
+    </div>
+
+    <b class="tech-grid__titles" *ngIf='work.rolesSub'>Sub Roles:</b>
+    <div class="tech-grid__badges" *ngIf='work.rolesSub'>
+      <span *ngFor='let role of work.rolesSub' class="badge badge-secondary">{{role}}</span>
+    </div>
+  </div>
 </div>
-<p>
-    **Software Engineer** - Working both independently and in a small development team to rapidly improve this start-ups Trade Promotion products and services. 
-    Currently the technical lead on a fresh Greenfield project to deliver modern, high performance, scalable forecasting solutions to a range of industries.     
-    **Techs;** C#, .NET 4.5, WPF, F#, SQL, Telerik Controls, Visual Studio 2015, TFS, SVN, SSMS, TeamCity.    
-    **Main Roles;** Programming, testing, designing, researching and documentation.    
-    **Other Roles;** Support, client communication and presentations.
-</p>
-<div class="header-date">
-  <h5 class="heading__header heading__header--no-margin-bottom">Hewlett Packard Enterprise Services</h5>
-  <span class="heading__date">October '13 - October '14</span>
-</div>
-<p>
-    **Graduate Information Analyst** – Worked in my first technical rotation as a Software Developer primarily using C within a Linux environment. Part of a large development team on the Hawk Aircraft variant of AMPA (Advanced Mission Planning Aid)   
-    **Roles include;** Design, programming, testing, reviewing, debugging, investigating, documentation, troubleshooting, client communication and problem solving. 
-</p>
-<div class="header-date">
-  <h5 class="heading__header heading__header--no-margin-bottom">University of Surrey</h5>
-  <span class="heading__date">July '12 - September '12</span>
-</div>
-<p>
-    **Windows 7 Rollout Technician/ 2nd Line Support** – Responsible for working in a rollout team dedicated to upgrading Laptops and PCs to Windows 7. I was tasked with installing and configuring computer systems, diagnosing hardware and software faults and solving technical and application problems. I organised computer audits and upgrades on my own and as part of a team, and communicated with new people on a daily basis. I also worked alongside non-rollout IT staff during busy periods to help maintain a stable work load.
-</p>
