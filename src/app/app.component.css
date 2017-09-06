@@ -14,11 +14,16 @@
 }
 
 .content {
+    height: 100%;
+    position: relative;
     background-color: ghostwhite;
-    border-top: 2px dashed rebeccapurple;
-    border-bottom: 2px dashed rebeccapurple;
+    /* border-top: 2px dashed rebeccapurple;
+    border-bottom: 2px dashed rebeccapurple; */
     grid-column-start: 2;
     grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
 }
 
 .logo {

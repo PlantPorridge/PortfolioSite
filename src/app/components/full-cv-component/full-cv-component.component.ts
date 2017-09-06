@@ -9,9 +9,11 @@ export class FullCvComponentComponent implements OnInit {
 
   constructor() { }
 
+  educationHistory: Education[];
   workHistory: Work[];
 
   ngOnInit() {
+    this.educationHistory = [this.warwickEducation, this.godalmingEducation, this.rodboroughEducation];
     this.workHistory = [this.exceedraWork, this.hpWork, this.surreyWork];
   }
 
@@ -25,11 +27,11 @@ export class FullCvComponentComponent implements OnInit {
     techsSub: ["F#", "SQL", "Karma", "Jasmine", "Protractor", "Cucumber", "Telerik"],
     tools: ["VS '13-'17", "VS Core", "TFS", "SVN", "GIT", "SSMS", "TeamCity"],
     rolesCore: ["Develop", "Design", "Test", "Support", "Research"],
-    rolesSub : ["Manage", "Lead", "Review", "Interview", "Present", "Client Communication"]
+    rolesSub: ["Manage", "Lead", "Review", "Interview", "Present", "Client Communication"]
   };
 
   hpWork: Work = {
-    company: "Hewlett Packard Enterprise Services",
+    company: "Hewlett Packard",
     startDate: new Date(2013, 9),
     endDate: new Date(2014, 9),
     jobTitle: "Graduate Information Analyst",
@@ -38,7 +40,7 @@ export class FullCvComponentComponent implements OnInit {
     techsSub: ["Bullseye", "Coverity", "Valgrind"],
     tools: ["Linux"],
     rolesCore: ["Develop", "Design", "Test", "Review", "Debug", "Document"],
-    rolesSub : ["Client Communication"]
+    rolesSub: ["Client Communication"]
   };
 
   surreyWork: Work = {
@@ -51,9 +53,64 @@ export class FullCvComponentComponent implements OnInit {
     techsSub: null,
     tools: null,
     rolesCore: ["Installation", "Backup", "Lead", "Client Communication", "Time Management"],
-    rolesSub : null
+    rolesSub: null
   };
-  
+
+  warwickEducation: Education = {
+    school: "University of Warwick",
+    startDate: new Date(2010, 8),
+    endDate: new Date(2013, 6),
+    levelAndResults: [
+      <EducationLevelAndResults>{
+        level: "BSc (hons)",
+        results: [
+          <SubjectResult>{ subject: "Discrete Mathematics", result: "2:1 (68%)" }
+        ]
+      }
+    ],
+    note: "My final year result was 1:1 (74.3%)"
+  }
+
+  godalmingEducation: Education = {
+    school: "Godalming College",
+    startDate: new Date(2008, 8),
+    endDate: new Date(2010, 6),
+    levelAndResults: [
+      <EducationLevelAndResults>{
+        level: "A-Levels",
+        results: [
+          <SubjectResult>{ subject: "Mathematics", result: "A*" },
+          <SubjectResult>{ subject: "Further Mathematics", result: "A" },
+          <SubjectResult>{ subject: "Computing", result: "B" }
+        ]
+      },
+      <EducationLevelAndResults>{
+        level: "AS-Levels",
+        results: [
+          <SubjectResult>{ subject: "Economics", result: "B" },
+          <SubjectResult>{ subject: "Physics", result: "B" }
+        ]
+      }
+    ],
+    note: null
+  }
+
+  rodboroughEducation: Education = {
+    school: "Rodborough School",
+    startDate: new Date(2003, 8),
+    endDate: new Date(2008, 6),
+    levelAndResults: [
+      <EducationLevelAndResults>{
+        level: "GCSEs",
+        results: [
+          <SubjectResult>{ subject: "Mathematics", result: "A" },
+          <SubjectResult>{ subject: "English Literature", result: "B" },
+          <SubjectResult>{ subject: "English Language", result: "B" }
+        ]
+      }
+    ],
+    note: "I hold 10 grade B and above GCSEs"
+  }
 
 }
 
@@ -68,4 +125,22 @@ export class Work {
   public tools: string[];
   public rolesCore: string[];
   public rolesSub: string[];
+}
+
+export class Education {
+  public school: string;
+  public startDate: Date;
+  public endDate: Date;
+  public levelAndResults: EducationLevelAndResults[];
+  public note: string;
+}
+
+export class EducationLevelAndResults {
+  public level: string;
+  public results: SubjectResult[];
+}
+
+export class SubjectResult {
+  public subject: string;
+  public result: string;
 }
