@@ -7,10 +7,35 @@
     grid-column-gap: 5px;    
 }
 
+@media (max-width: 600px) { 
+    .root-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    .panel__menu {
+        display: none;
+    }
+    .panel__profile {
+        display: grid;
+        grid-template-columns: 50px auto 1fr;
+    }
+    .panel__profile__logo {
+        width: 50px;
+    }
+    .panel__profile__company {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        color: lightcoral;
+    }
+    .panel__profile__person {
+        display: none;
+    }
+}
+
 .panel {
     background-color: ghostwhite;    
-    grid-column-start: 1;
-    grid-column-end: 2;
+    /*grid-column-start: 1;
+    grid-column-end: 2;*/
 }
 
 .content {
@@ -19,11 +44,27 @@
     background-color: ghostwhite;
     /* border-top: 2px dashed rebeccapurple;
     border-bottom: 2px dashed rebeccapurple; */
-    grid-column-start: 2;
-    grid-column-end: 3;
+    /*grid-column-start: 2;
+    grid-column-end: 3;*/
     display: flex;
     justify-content: center;
     overflow-y: auto;
+}
+
+.panel__profile {
+
+}
+
+.panel__profile__logo {
+
+}
+
+panel__profile__company {
+
+}
+
+.panel__profile__person {
+
 }
 
 .logo {
