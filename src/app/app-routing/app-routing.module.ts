@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FullCvComponentComponent } from "../components/full-cv-component/full-cv-component.component";
+import { FullCvComponent } from "../components/full-cv/full-cv.component";
+import { HomeComponent } from "../components/home/home.component";
 
 const routes: Routes = [
     {
         path: '',
-        component: FullCvComponentComponent,
+        redirectTo: "/home",
+        pathMatch: 'full'
+    },
+    {
+        path: 'home',
+        component: HomeComponent,
+    },
+    {
+        path: 'cv',
+        component: FullCvComponent,
     },
 ];
 

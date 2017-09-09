@@ -28,13 +28,17 @@
         ElliotWilkinson / PlantPorridge
       </h6>
     </div>
-    <div class="panel__menu list-group">
-      <a href="#" class="list-group-item list-group-item-action"><b>Curriculum Vitae v</b></a>
-      <!--Add sub items linking to detailed pages of my work-->
-      <a href="#" class="list-group-item list-group-item-action"><b>Anuglar Components v</b></a>
-      <!--Add sub items linking to charts, grids and whatever else I build-->
-      <a href="#" class="list-group-item list-group-item-action">Add more here.</a>
-      <a href="#" class="list-group-item list-group-item-action disabled">In Progress...</a>
+    <button type="button" class="panel__menu__toggle btn btn-light" data-toggle="collapse" data-target="#navbaritems">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div id="navbaritems" class="panel__menu collapse hide">
+    <ul class="list-group ">
+      <li routerLink="/home" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Home</b></li>
+      <li routerLink="/cv" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Curriculum Vitae</b></li>
+      <li href="#" class="list-group-item list-group-item-action"><b>Anuglar Components</b></li>
+      <li href="#" class="list-group-item list-group-item-action">Add more here.</li>
+      <li href="#" class="list-group-item list-group-item-action disabled">In Progress...</li>
+    </ul>
     </div>
   </div>
   <div class="content">

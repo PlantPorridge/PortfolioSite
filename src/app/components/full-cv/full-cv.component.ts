@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-full-cv-component',
-  templateUrl: './full-cv-component.component.html',
-  styleUrls: ['./full-cv-component.component.css']
+  selector: 'app-full-cv',
+  templateUrl: './full-cv.component.html',
+  styleUrls: ['./full-cv.component.css']
 })
-export class FullCvComponentComponent implements OnInit {
+export class FullCvComponent implements OnInit {
 
   constructor() { }
 
