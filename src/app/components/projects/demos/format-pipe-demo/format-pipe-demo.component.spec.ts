@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormatPipeDemoComponent } from './format-pipe-demo.component';
+import { FormsModule } from '@angular/forms';
+import { FormatPipe } from 'ng-format-pipe';
 
 describe('FormatPipeDemoComponent', () => {
   let component: FormatPipeDemoComponent;
@@ -8,7 +10,11 @@ describe('FormatPipeDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormatPipeDemoComponent ]
+      declarations: [ FormatPipeDemoComponent, FormatPipe ],
+      imports: [
+        FormsModule
+         
+      ]
     })
     .compileComponents();
   }));

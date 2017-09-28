@@ -13,7 +13,7 @@ export class BadgeGroupGridComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.badgeGroups);
+
   }
 
 }
