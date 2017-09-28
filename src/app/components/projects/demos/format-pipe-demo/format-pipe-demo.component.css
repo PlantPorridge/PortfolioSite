@@ -1,0 +1,56 @@
+:host {
+    width: 100%;
+    position: absolute;
+    max-height: 100%;
+}
+
+.selection-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5px;
+    align-items: center;
+}
+
+.predefined-body {
+
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;    
+    width: 310px;
+}
+
+.description {
+    max-width: 600px;
+    margin: 5px;
+}
+
+.demo {
+    margin-top: 10px;
+}
+
+@media(min-width:900px){
+    .demo {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        width: 610px;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+    .description {
+        grid-column: span 2;
+    }
+
+    .card {
+        margin-bottom: auto;    
+    }
+
+    .predefined {
+        width: auto;
+        max-width: 500px;
+    }
+}

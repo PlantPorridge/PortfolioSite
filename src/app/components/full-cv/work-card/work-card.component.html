@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    <div class="heading">
+      <h5 class="card-title">{{work.company}}</h5>
+      <span class="card-date text-muted">{{work.startDate | date:'MMM yy'}} - {{work.endDate | date:'MMM yy'}}</span>
+    </div>
+    <h6 class="mb-0">{{work.jobTitle}}</h6>
+  </div>
+  <div class="card-body">
+    <p>{{work.jobDescription}}</p>
+    <app-badge-group-grid [badgeGroups]='work.badgeGroups'></app-badge-group-grid>
+  </div>
+</div>

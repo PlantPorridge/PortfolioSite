@@ -1,0 +1,8 @@
+<div class="card card-header">
+  <h1 class="mb-0">Projects</h1>
+</div>
+<div class="projects-grid">
+  <ng-container *ngFor='let project of projects'>
+    <app-project-card [project]='project'></app-project-card>
+  </ng-container>
+</div>

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FullCvComponent } from "../components/full-cv/full-cv.component";
 import { HomeComponent } from "../components/home/home.component";
+import { ProjectsComponent } from '../components/projects/projects.component';
+import { FormatPipeDemoComponent } from '../components/projects/demos/format-pipe-demo/format-pipe-demo.component';
 
 const routes: Routes = [
     {
@@ -16,6 +18,14 @@ const routes: Routes = [
     {
         path: 'cv',
         component: FullCvComponent,
+    },
+    {
+        path: 'projects',
+        component: ProjectsComponent,
+    },
+    {
+        path: 'projects/formatpipedemo',
+        component: FormatPipeDemoComponent,
     },
 ];
 

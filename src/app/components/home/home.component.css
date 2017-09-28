@@ -1,0 +1,22 @@
+:host {
+    position: absolute;
+    max-width: 1000px;
+    height: 100%;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+
+.intro--profile {
+    height: 150px;
+    width: 150px;
+    margin: 2px;
+    border: 2px solid lightcoral;
+}
+
+.intro--description {
+
+}

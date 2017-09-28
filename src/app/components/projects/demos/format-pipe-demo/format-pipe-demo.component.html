@@ -1,0 +1,69 @@
+<div class="card-header">
+  <h1 class="mb-0">Format Pipe Demo</h1>
+  <h6 class="mb-0 text-muted"><a routerLink="/projects" routerLinkActive="active">Back to Projects</a></h6>
+</div>
+
+<div class="demo">
+
+  <div class="description">
+    <p>
+      This <b>format</b> pipe will format you values according to the given <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" target="_blank">Standard Numeric Format String</a>.
+      Enter a Precision and Value below to see it in action.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="heading">
+        <h5 class="card-title mb-0">Try it Yourself</h5>
+      </div>
+    </div>
+    <div class="card-body selection-form">
+      <label>Code</label>
+      <select class="form-control" [(ngModel)]="selectedCode">
+        <option *ngFor='let code of formatCodes' [value]="code">{{code}}</option>
+      </select>
+      <label>Precision</label>
+      <input class="form-control" type="number" min="0" max="20" [(ngModel)]="selectedPrecision">
+      <label>Value</label>
+      <input class="form-control" type="number" [(ngModel)]="selectedValue">
+      <label>Pipe</label>
+      <label>{{selectedValue}} | format:'{{selectedCode}}{{selectedPrecision}}'</label>
+      <label>Result</label>
+      <div *ngIf="selectedCode + selectedPrecision; let customFormatString">
+        <label>{{selectedValue | format:customFormatString}}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card predefined">
+    <div class="card-header">
+      <div class="heading">
+        <h5 class="card-title mb-0">Predefined Precision</h5>
+      </div>
+    </div>
+    <div class="card-body predefined-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Format String</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor='let ps of precisionSpecifiers'>
+            <tr *ngIf="selectedCode + (ps || ''); let formatString">
+              <td>{{selectedValue}}</td>
+              <td>{{formatString}}</td>
+              <td>{{selectedValue | format:formatString}}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+</div>

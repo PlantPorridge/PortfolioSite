@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <div class="heading">
+      <h5 class="card-title">{{project.title}}</h5>
+      <span class="card-date text-muted">{{project.startDate | date:'MMM yy'}} - {{project.endDate | date:'MMM yy'}}</span>
+    </div>
+    <span *ngFor='let ciBadge of project.ciBadges'><img src="{{ciBadge}}"></span>
+  </div>
+  <div class="card-body">
+    <p>{{project.description}}</p>
+    <div class="mb-3" *ngIf="project.link">
+      <a href="{{project.link}}" target="_blank">View on Github</a>
+    </div>
+    <div class="mb-3" *ngIf="project.demo">
+      <a routerLink="/projects/{{project.demo}}" routerLinkActive="active">Demo</a>
+    </div>
+    <app-badge-group-grid [badgeGroups]='project.badgeGroups'></app-badge-group-grid>
+  </div>
+</div>

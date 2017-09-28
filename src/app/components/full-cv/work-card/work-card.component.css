@@ -1,0 +1,14 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-title {
+    margin-right: 5px; 
+    margin-bottom: 0px;    
+}
+
+.card-title, .card-date {
+    white-space: nowrap;
+}

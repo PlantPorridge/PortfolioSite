@@ -1,0 +1,6 @@
+<ng-container class="badge-grid" *ngFor='let group of badgeGroups'>
+    <b class="badge-group__title">{{group.title}}:</b>
+    <div class="badge-group__badges">
+      <span *ngFor='let badge of group.badges' class="badge badge-{{group.context}}">{{badge}}</span>
+    </div>
+</ng-container>

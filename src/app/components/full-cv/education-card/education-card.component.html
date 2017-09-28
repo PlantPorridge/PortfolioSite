@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header heading">
+    <h5 class="card-title">{{education.school}}</h5>
+    <span class="card-date text-muted">{{education.startDate | date:'MMM yy'}} - {{education.endDate | date:'MMM yy'}}</span>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered" *ngFor="let levelAndResults of education.levelAndResults">
+      <tr>
+        <th colspan="2">{{levelAndResults.level}}</th>
+      </tr>
+      <tr *ngFor="let result of levelAndResults.results">
+        <td>{{result.subject}}</td>
+        <td>{{result.result}}</td>
+      </tr>
+    </table>
+    <footer *ngIf="education.note" class="blockquote-footer">{{education.note}}</footer>
+  </div>
+</div>

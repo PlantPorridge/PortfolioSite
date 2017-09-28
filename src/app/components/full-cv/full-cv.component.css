@@ -25,20 +25,3 @@
 .heading__header, .heading__date {
     white-space: nowrap;
 }
-
-.heading__header--no-margin-bottom {
-    margin-bottom: 0px;
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: auto 1fr;
-}
-
-.tech-grid__titles {
-    
-}
-
-.tech-grid__badges {
-
-}
