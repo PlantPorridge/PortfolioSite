@@ -34,17 +34,17 @@ export class FullCvComponent implements OnInit {
       <BadgeGroup>{
         title: "Core Techs",
         context: "primary",
-        badges: ["TS", "JS", "Angular", "HTML5", "CSS3", "C#", ".NET 4.5", "WPF"]
+        badges: ["TS", "JS", "Angular", "HTML5", "CSS3", "C#", ".NET 4.5", "WPF", "Telerik"]
       },
       <BadgeGroup>{
         title: "Sub Techs",
         context: "secondary",
-        badges: ["F#", "SQL", "Karma", "Jasmine", "Protractor", "Cucumber", "Telerik"]
+        badges: ["F#", "SQL", "Karma", "Jasmine", "Protractor", "Cucumber"]
       },
       <BadgeGroup>{
         title: "Tools",
         context: "info",
-        badges: ["VS '13-'17", "VS Code", "TFS", "SVN", "GIT", "SSMS", "TeamCity"]
+        badges: ["VS '13-'17", "VS Code", "TFS", "SVN", "GIT", "SSMS", "TeamCity", "Agile", "Scrum", "Jira"]
       },
       <BadgeGroup>{
         title: "Core Roles",
