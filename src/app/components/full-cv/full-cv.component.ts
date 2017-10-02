@@ -29,7 +29,7 @@ export class FullCvComponent implements OnInit {
     startDate: new Date(2014, 9),
     endDate: new Date(2017, 8),
     jobTitle: "Software Developer",
-    jobDescription: "I worked both independently and in a small development team to rapidly improve this start-ups Trade Promotion products and services. Held ownership of a range of projects and lead the development of a C# server-side forecasting engine and a conversion project to migrate an existing WPF application into Angular. The new Angular App boasts full delivery customisation by allowing almost all design, layout, functionality and component communication to be configured by incoming data.",
+    jobDescription: "I worked both independently and in a small development team to rapidly improve this start-up's Trade Promotion products and services. Held ownership of a range of projects and led the development of a C# server-side forecasting engine and a conversion project to migrate an existing WPF application into Angular. The new Angular App boasts full delivery customisation by allowing almost all design, layout, functionality and component communication to be configured by incoming data.",
     badgeGroups: [
       <BadgeGroup>{
         title: "Core Techs",
@@ -126,7 +126,7 @@ export class FullCvComponent implements OnInit {
         ]
       }
     ],
-    note: "My final year result was 1:1 (74.3%)"
+    note: "My final year result was a 1st (74.3%)"
   }
 
   godalmingEducation: Education = {
