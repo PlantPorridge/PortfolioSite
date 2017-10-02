@@ -1,31 +1,38 @@
-<div class="card card-header">
-  <h1 class="mb-0">Elliot Wilkinson</h1>
-</div>
+<div class="content">
+  <div class="cv-title">
+    <h3>CV</h3>
+  </div>
 
-<div class="card-header text-white bg-info">
-  <h4 class="mb-0">Contact</h4>
-</div>
+  <div class="elevation-z6 cv-section">
+    <div class="card-header">
+      <h4 class="mb-0">CONTACT</h4>
+    </div>
 
-<div class="card">
-  <pre class="mb-0">
-    <code title="Location">L: London</code>
-    <code title="Telephone">T: +447920752087</code>
-    <code title="Work Email">W: <a href="mailto:Elliot.Wilkinson@wilkware.co.uk">Elliot.Wilkinson@wilkware.co.uk</a></code>
-    <code title="Personal Email">P: <a href="mailto:PlantPorridge@gmail.com">PlantPorridge@gmail.com</a></code></pre>    
-</div>
+    <div class="card-body">
+      <pre class="mb-0"><code title="Location">L: London</code><br/><code title="Telephone">T: +447920752087</code><br/><code title="Work Email">W: <a href="mailto:Elliot.Wilkinson@wilkware.co.uk">Elliot.Wilkinson@wilkware.co.uk</a></code><br/><code title="Personal Email">P: <a href="mailto:PlantPorridge@gmail.com">PlantPorridge@gmail.com</a></code></pre>
+    </div>
+  </div>
 
-<div class="card-header text-white bg-info">
-  <h4 class="mb-0">Education</h4>
-</div>
 
-<div *ngFor='let education of educationHistory'>
-  <app-education-card [education]=education></app-education-card>
-</div>
+  <div class="elevation-z6 cv-section">
 
-<div class="card-header text-white bg-info">
-  <h4 class="mb-0">Work</h4>
-</div>
+    <div class="card-header">
+      <h4 class="mb-0">EDUCATION</h4>
+    </div>
 
-<div *ngFor='let work of workHistory'>
-  <app-work-card [work]='work'></app-work-card>
+    <div class="card-body">
+      <app-education-card *ngFor='let education of educationHistory' [education]=education></app-education-card>
+    </div>
+  </div>
+
+  <div class="elevation-z6 cv-section">
+
+    <div class="card-header">
+      <h4 class="mb-0">WORK</h4>
+    </div>
+
+    <div class="card-body">
+      <app-work-card *ngFor='let work of workHistory' [work]='work'></app-work-card>
+    </div>
+  </div>
 </div>

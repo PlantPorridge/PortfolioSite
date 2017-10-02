@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule} from '@angular/forms'
 
@@ -13,6 +14,9 @@ import { BadgeGroupGridComponent } from './components/badge-group-grid/badge-gro
 import { WorkCardComponent } from './components/full-cv/work-card/work-card.component';
 import { EducationCardComponent } from './components/full-cv/education-card/education-card.component';
 import { FormatPipeDemoComponent } from './components/projects/demos/format-pipe-demo/format-pipe-demo.component';
+
+import {MatSidenavModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { FormatPipeDemoComponent } from './components/projects/demos/format-pipe
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatButtonModule 
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "en-GB" }

@@ -10,6 +10,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
+  skills: string[] = ["Angular 2", "C#", "WPF", "TypeScript", "HTML5", "CSS3", "Karma", "Jasmine", "Git", "TFS", "Jira"]
 
 }

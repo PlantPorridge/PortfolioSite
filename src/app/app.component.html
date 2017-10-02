@@ -1,48 +1,39 @@
-<div class="root-container">
-  <div class="panel">
-    <div class="panel__profile" style="text-align:center">
-      <!-- <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo="> -->
-      <svg class="panel__profile__logo" viewBox="0 0 100 100">
-        <defs>
-          <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 170 70">
-              <path d="M10 10 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo" />
-              <path d="M10 10 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo" transform="translate(170), scale(-1, 1)" />
-      
-              <path d="M10 40 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo"   />
-              <path d="M10 40 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo" transform="translate(170), scale(-1, 1)" />
-          </pattern>
-        </defs>
-        <circle cx="50" cy="50" r="45" fill="url(#image)" class="logo__circle" />
-      </svg>
-      <!--<svg viewBox="0 0 170 70" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 10 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo" />
-        <path d="M10 10 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo" transform="translate(170), scale(-1, 1)" />
+<nav class="elevation-z6 nav-bar">
+  <button type="button" class="nav-bar__toggle" md-button (click)="sidenav.open()">
+    <span class="fa fa-bars"></span>
+  </button>
+  <div class="nav-bar__company">
+    <svg class="company__logo" style="height: 50px" viewBox="0 0 100 100">
+      <defs>
+        <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 170 70">
+          <path d="M10 10 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" />
+          <path d="M10 10 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" transform="translate(170), scale(-1, 1)" />
 
-        <path d="M10 40 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo"   />
-        <path d="M10 40 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" class="logo" transform="translate(170), scale(-1, 1)" />
-      </svg>-->
-      <h3 class="panel__profile__company">
-        Wilkware
-      </h3>
-      <h6 class="panel__profile__person">
-        ElliotWilkinson / PlantPorridge
-        <br/>
-        <code title="Github"><a href="https://github.com/PlantPorridge" target="_blank">Github</a></code>            
-      </h6>
+          <path d="M10 40 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" />
+          <path d="M10 40 q 15 0 20 10 t 20 10 t 20 -10 t 15 -10" transform="translate(170), scale(-1, 1)" />
+        </pattern>
+      </defs>
+      <circle cx="50" cy="50" r="45" fill="url(#image)" />
+    </svg>
+    <span class="company__name">WILKWARE</span>
+  </div>
+  <button class="nav-bar__profile" type="button" md-button routerLink="/home" routerLinkActive="active">
+    <span>ELLIOT WILKINSON</span>
+  </button>
+</nav>
 
+<md-sidenav-container class="root-sidenav-container">
+  <md-sidenav #sidenav class="root-sidenav-container__sidenav">
+    <div id="navbaritems">
+      <ul class="list-group elevation-z6">
+        <li routerLink="/home" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Home</b></li>
+        <li routerLink="/cv" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Curriculum Vitae</b></li>
+        <li routerLink="/projects" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Projects</b></li>
+      </ul>
     </div>
-    <button type="button" class="panel__menu__toggle btn btn-light" data-toggle="collapse" data-target="#navbaritems">
-      <span class="fa fa-bars"></span>
-    </button>
-    <div id="navbaritems" class="panel__menu collapse hide">
-    <ul class="list-group ">
-      <li routerLink="/home" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Home</b></li>
-      <li routerLink="/cv" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Curriculum Vitae</b></li>
-      <li routerLink="/projects" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Projects</b></li>
-    </ul>
-    </div>
+  </md-sidenav>
+
+  <div class="root-sidenav-container__content">
+    <router-outlet></router-outlet>
   </div>
-  <div class="content">
-      <router-outlet></router-outlet>
-  </div>
-</div>
+</md-sidenav-container>

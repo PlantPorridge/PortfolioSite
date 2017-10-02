@@ -1,6 +1,24 @@
 :host {
     position: absolute;
+    width: 100%;
+}
+
+.content {
     max-width: 1000px;
+    margin: 2rem auto;    
+}
+
+@media(max-width:1030px){
+    .content {
+        margin: 2rem 1em;    
+    }
+}
+
+.profile-content {
+    display: grid;  
+    margin: 2rem 4rem;
+    grid-gap: 1rem;  
+    grid-template-rows: [title] auto [card] auto [about] 1fr;
 }
 
 .card {
@@ -8,20 +26,21 @@
 }
 
 .card-header > h4 {
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    /* text-shadow: 0px 1px 2px rgba(0,0,0,0.2); */
 }
 
-.heading {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.cv-section {
+    background-color: ghostwhite;
+    margin: 1rem 0rem;    
 }
 
-.heading__header {
-    margin-right: 5px; 
-    margin-bottom: 0px;    
+.card-header {
+    text-align: center;
+    color: #3f51b5;
+    border-bottom: 3px solid #3f51b5;
 }
 
-.heading__header, .heading__date {
-    white-space: nowrap;
+.cv-section > .card-body {
+    display: grid;
+    grid-gap: 1rem;
 }

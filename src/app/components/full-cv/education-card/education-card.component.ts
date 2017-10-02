@@ -4,7 +4,8 @@ import { Education } from '../../../models/full-cv/education/eductation.model';
 @Component({
   selector: 'app-education-card',
   templateUrl: './education-card.component.html',
-  styleUrls: ['./education-card.component.css']
+  styleUrls: ['./education-card.component.css'],
+  host: {'class': 'card'}
 })
 export class EducationCardComponent implements OnInit {
 

@@ -1,22 +1,139 @@
-:host {
-    position: absolute;
+/* :host {
+    padding: 2rem;
     max-width: 1000px;
     height: 100%;
+    width: 100%;
+} */
+
+/* .svg-background {
+    width: 100%;
+    height: 400px;
+    margin-top: -2rem; 
+    margin-bottom: -400px;
 }
 
-.intro {
+.svg-background > svg {
+    width: 100%;
+    height: 100%;
+} */
+
+.profile-content {
+    display: grid;  
+    margin: 2rem 4rem;
+    grid-gap: 1rem;  
+    grid-template-rows: [title] auto [card] auto [about] 1fr;
+}
+
+.profile-title {
+    grid-row: title / card;
+}
+
+.profile-card {
+    grid-row: card / about;
+    background: ghostwhite;
+    padding: 1rem;
     display: grid;
-    grid-template-columns: auto;
-    justify-items: center;
+    grid-template-columns: [img] auto [desc] 1fr [contact] auto
 }
 
-.intro--profile {
+.profile-about {
+    grid-row: about / about;
+    background: ghostwhite;
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+.profile-about .card-header {
+    border-bottom: 3px solid #3f51b5;
+    color: #3f51b5;
+    background-color: ghostwhite;
+}
+
+.profile-about .card-title {
+    text-align: center;
+}
+
+.about__skills {
+    border-top: 2px solid #3f51b5;
+    padding-top: 1rem;
+}
+
+.about__skills > span {
+    font-size: 1rem;
+    margin: .25rem;
+    background-color: #3f51b5;
+    font-weight: 500;
+}
+
+.profile-card__img {
     height: 150px;
     width: 150px;
     margin: 2px;
-    border: 2px solid lightcoral;
+    grid-column: img / desc;
 }
 
-.intro--description {
+.profile-card__desc {
+    grid-column: desc / contact;
+    padding: .5rem;
+    display: grid;
+    grid-template-rows: [text] 1fr [buttons] auto;
+}
 
+.desc__text {
+    grid-row: text / buttons;
+}
+
+.desc__buttons {
+    grid-row: buttons / buttons;
+}
+
+.profile-card__contact {
+    grid-column: contact;
+    border-left: 2px solid #3f51b5;
+    padding: .5rem;
+}
+
+.contact__social a {
+    margin: .25rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #3f51b5;
+    border: none;
+}
+
+@media(max-width:900px){
+    .profile-card {
+        grid-template-columns: [img] auto [desc] 1fr;
+        grid-template-rows: [core] auto [contact] auto;
+    }
+
+    .profile-card__contact {
+        grid-column: img / 3;        
+        grid-row: contact;                        
+        border-left: 0px solid #3f51b5;
+        border-top: 2px solid #3f51b5;        
+    }
+}
+
+@media(max-width:600px){
+    .profile-content {
+        margin: 2rem 1rem;
+    }
+}
+
+@media(max-width:500px){
+    .profile-card {
+        justify-self: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: [img] auto [desc] auto [contact] auto;
+    }
+
+    .profile-content {
+        margin: 1rem .5rem;
+    }
+
+    /* Center Content */
+    .profile-card__img, .desc__text, .desc__buttons {
+        justify-self: center;
+    }    
 }
