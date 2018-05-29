@@ -1,5 +1,5 @@
 <nav class="elevation-z6 nav-bar">
-  <button type="button" class="nav-bar__toggle" md-button (click)="sidenav.open()">
+  <button type="button" class="nav-bar__toggle" mat-button (click)="sidenav.open()">
     <span class="fa fa-bars"></span>
   </button>
   <div class="nav-bar__company">
@@ -17,23 +17,29 @@
     </svg>
     <span class="company__name">WILKWARE</span>
   </div>
-  <button class="nav-bar__profile" type="button" md-button routerLink="/home" routerLinkActive="active">
+  <button class="nav-bar__profile" type="button" mat-button routerLink="/home" routerLinkActive="active">
     <span>ELLIOT WILKINSON</span>
   </button>
 </nav>
 
-<md-sidenav-container class="root-sidenav-container">
-  <md-sidenav #sidenav class="root-sidenav-container__sidenav">
+<mat-sidenav-container class="root-sidenav-container">
+  <mat-sidenav #sidenav class="root-sidenav-container__sidenav">
     <div id="navbaritems">
       <ul class="list-group elevation-z6">
-        <li routerLink="/home" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Home</b></li>
-        <li routerLink="/cv" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Curriculum Vitae</b></li>
-        <li routerLink="/projects" routerLinkActive="active" class="list-group-item list-group-item-action"><b>Projects</b></li>
+        <li routerLink="/home" routerLinkActive="active" class="list-group-item list-group-item-action">
+          <b>Home</b>
+        </li>
+        <li routerLink="/cv" routerLinkActive="active" class="list-group-item list-group-item-action">
+          <b>Curriculum Vitae</b>
+        </li>
+        <li routerLink="/projects" routerLinkActive="active" class="list-group-item list-group-item-action">
+          <b>Projects</b>
+        </li>
       </ul>
     </div>
-  </md-sidenav>
+  </mat-sidenav>
 
   <div class="root-sidenav-container__content">
     <router-outlet></router-outlet>
   </div>
-</md-sidenav-container>
+</mat-sidenav-container>

@@ -19,10 +19,39 @@ export class FullCvComponent implements OnInit {
 
   ngOnInit() {
     this.educationHistory = [this.warwickEducation, this.godalmingEducation, this.rodboroughEducation];
-    this.workHistory = [this.exceedraWork, this.hpWork, this.surreyWork];
+    this.workHistory = [this.insyncWork, this.exceedraWork, this.hpWork, this.surreyWork];
   }
 
   //Eventually move this data to a service/db
+  insyncWork: Work = {
+    company: "In-Sync Group",
+    startDate: new Date(2018, 0),
+    endDate: null,
+    jobTitle: "Full Stack Web Developer",
+    jobDescription: "Development of a public facing web applications built using Angular (5+). I operate in a Full Stack role with a specialization in Angular. Work with other developers, testers and designers in an agile environment.",
+    badgeGroups: [
+      <BadgeGroup>{
+        title: "Core Techs",
+        context: "primary",
+        badges: ["TS", "JS", "Angular", "RxJs", "HTML5", "CSS3", "C#", ".NET 4.5", "Entity Framework", "ASP.NET Web API 2"]
+      },
+      <BadgeGroup>{
+        title: "Sub Techs",
+        context: "secondary",
+        badges: ["SQL", "Ionic", "Cordova", "iOS", "Andriod"]
+      },
+      <BadgeGroup>{
+        title: "Tools",
+        context: "info",
+        badges: ["VS '15", "VS Code", "SVN", "SSMS", "TeamCity", "Octopus Deploy", "Agile", "Scrum", "Trello"]
+      },
+      <BadgeGroup>{
+        title: "Core Roles",
+        context: "primary",
+        badges: ["Development"]
+      }
+    ]
+  };
 
   exceedraWork: Work = {
     company: "Exceedra",
