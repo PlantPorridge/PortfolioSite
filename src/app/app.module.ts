@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule} from '@angular/forms'
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { FullCvComponent } from './components/full-cv/full-cv.component';
@@ -15,8 +15,9 @@ import { WorkCardComponent } from './components/full-cv/work-card/work-card.comp
 import { EducationCardComponent } from './components/full-cv/education-card/education-card.component';
 import { FormatPipeDemoComponent } from './components/projects/demos/format-pipe-demo/format-pipe-demo.component';
 
-import {MatSidenavModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material';
+import { MatSidenavModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
+import { NoConflictStyleCompatibilityMode } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {MatButtonModule} from '@angular/material';
     FormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatButtonModule 
+    MatButtonModule,
+    NoConflictStyleCompatibilityMode
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "en-GB" }
