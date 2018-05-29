@@ -33,7 +33,7 @@ export class FullCvComponent implements OnInit {
       <BadgeGroup>{
         title: "Core Techs",
         context: "primary",
-        badges: ["TS", "JS", "Angular", "RxJs", "HTML5", "CSS3", "C#", ".NET 4.5", "Entity Framework", "ASP.NET Web API 2"]
+        badges: ["TS", "JS (ES6)", "Angular (5+)", "RxJs", "HTML5", "CSS3", "C#", ".NET 4.5", "Entity Framework", "ASP.NET Web API 2"]
       },
       <BadgeGroup>{
         title: "Sub Techs",
@@ -50,6 +50,26 @@ export class FullCvComponent implements OnInit {
         context: "primary",
         badges: ["Development"]
       }
+    ]
+  };
+
+  contractingWork: Work = {
+    company: "Wilkware Limited",
+    startDate: new Date(2017, 8),
+    endDate: new Date(2018, 0),
+    jobTitle: "Software Contractor",
+    jobDescription: "Operating out of my own company to offer my software engineering skills with a focus on C# and Angular.",
+    badgeGroups: [
+      <BadgeGroup>{
+        title: "Core Techs",
+        context: "primary",
+        badges: ["TS", "JS (ES6)", "Angular (4+)", "HTML5", "CSS3", "C#", ".NET 4.5"]
+      },
+      <BadgeGroup>{
+        title: "Tools",
+        context: "info",
+        badges: ["Travis CI", "Firebase", "Coveralls", "VS Code"]
+      },
     ]
   };
 
