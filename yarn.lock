@@ -3972,9 +3972,9 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-ng-format-pipe@0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/ng-format-pipe/-/ng-format-pipe-0.0.11.tgz#c344a1321e723a168e125f554887ffa2351cf510"
+ng-format-pipe@0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/ng-format-pipe/-/ng-format-pipe-0.0.13.tgz#3a0d0430e6615096094953c186e370ebb127ca71"
   dependencies:
     tslib "^1.9.0"
 

@@ -19,8 +19,8 @@ before_script:
 - npm i istanbul jasmine coveralls -D
 script:
 - ng build --prod
-- ng test --watch=false --code-coverage
-- npm run coveralls
+# - ng test --watch=false --code-coverage
+# - npm run coveralls
 
 deploy:
   skip_cleanup: true
