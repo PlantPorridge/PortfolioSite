@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FullCvComponent } from "../components/full-cv/full-cv.component";
-import { HomeComponent } from "../components/home/home.component";
-import { ProjectsComponent } from '../components/projects/projects.component';
-import { FormatPipeDemoComponent } from '../components/projects/demos/format-pipe-demo/format-pipe-demo.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { FullCvComponent } from 'src/app/components/full-cv/full-cv.component';
+import { ProjectsComponent } from 'src/app/components/projects/projects.component';
+import { FormatPipeDemoComponent } from 'src/app/components/projects/demos/format-pipe-demo/format-pipe-demo.component';
+
 
 const routes: Routes = [
     {

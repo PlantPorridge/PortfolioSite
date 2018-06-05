@@ -1,30 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule, LOCALE_ID } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FullCvComponent } from './components/full-cv/full-cv.component';
-import { AppRoutingModule } from "./app-routing/app-routing.module";
-import { HomeComponent } from './components/home/home.component';
-import { FormatPipe } from 'ng-format-pipe';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
-import { BadgeGroupGridComponent } from './components/badge-group-grid/badge-group-grid.component';
-import { WorkCardComponent } from './components/full-cv/work-card/work-card.component';
-import { EducationCardComponent } from './components/full-cv/education-card/education-card.component';
-import { FormatPipeDemoComponent } from './components/projects/demos/format-pipe-demo/format-pipe-demo.component';
 
-import { MatSidenavModule } from '@angular/material';
-import { MatButtonModule } from '@angular/material';
-import { NoConflictStyleCompatibilityMode } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { FullCvComponent } from 'src/app/components/full-cv/full-cv.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { ProjectsComponent } from 'src/app/components/projects/projects.component';
+import { ProjectCardComponent } from 'src/app/components/projects/project-card/project-card.component';
+import { BadgeGroupGridComponent } from 'src/app/components/badge-group-grid/badge-group-grid.component';
+import { WorkCardComponent } from 'src/app/components/full-cv/work-card/work-card.component';
+import { EducationCardComponent } from 'src/app/components/full-cv/education-card/education-card.component';
+import { FormatPipeDemoComponent } from 'src/app/components/projects/demos/format-pipe-demo/format-pipe-demo.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { FormatPipeModule } from 'ng-format-pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FullCvComponent,
     HomeComponent,
-    FormatPipe,
+    // FormatPipe,
     ProjectsComponent,
     ProjectCardComponent,
     BadgeGroupGridComponent,
@@ -34,16 +34,14 @@ import { NoConflictStyleCompatibilityMode } from '@angular/material';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule,
     MatSidenavModule,
     MatButtonModule,
-    NoConflictStyleCompatibilityMode
+    FormatPipeModule
   ],
-  providers: [
-    { provide: LOCALE_ID, useValue: "en-GB" }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
