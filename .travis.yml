@@ -18,7 +18,7 @@ before_script:
 - npm install -g @angular/cli
 - npm i istanbul jasmine coveralls -D
 script:
-- ng build --prod
+- ng build --prod --base-href /PortfolioSite/
 # - ng test --watch=false --code-coverage
 # - npm run coveralls
 
